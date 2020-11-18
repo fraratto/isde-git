@@ -53,3 +53,4 @@ class TestNMC(unittest.TestCase):
         yc = self.clf.predict(self.x)
         assert yc.ndim == 1
         assert yc.shape[0] == self.x.shape[0]
+

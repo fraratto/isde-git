@@ -27,9 +27,13 @@ def load_data(filename):
 
 
 def split_data(x, y, tr_fraction=0.5):
-    """
-    Split the data x, y into two random subsets
+       pass
 
-    """
-    pass
-def
+
+def predict(x, centroids):
+    dist = euclidean_distances(x, centroids, squared=True)
+    y_pred = np.argmin(dist, axis=1)
+    return y_preddef predict(x, centroids):
+    dist = euclidean_distances(x, centroids, squared=True)
+    y_pred = np.argmin(dist, axis=1)
+    return y_pred
