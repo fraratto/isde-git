@@ -42,5 +42,11 @@ class NMC(object):
             xk = Xtr[ytr == self._class_labels[k], :]
             self._centroids[k, :] = np.mean(xk, axis=0)
 
-    def predict(self, xts):
-        pass
+    def predict(x, centroids):
+        dist = euclidean_distances(x, centroids, squared=True)
+        y_pred = np.argmin(dist, axis=1)
+        return y_preddef
+        predict(x, centroids):
+        dist = euclidean_distances(x, centroids, squared=True)
+        y_pred = np.argmin(dist, axis=1)
+        return y_pred
